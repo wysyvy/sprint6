@@ -25,7 +25,7 @@ func HandleIndex(w http.ResponseWriter, r *http.Request) {
 }
 
 func HandleUpload(w http.ResponseWriter, r *http.Request) {
-	file, fileHeader, err := r.FormFile("file")
+	file, fileHeader, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, "Error get file", http.StatusInternalServerError)
 		return
